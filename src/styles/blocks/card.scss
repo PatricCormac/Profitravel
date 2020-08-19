@@ -1,0 +1,139 @@
+.card {
+  background-color: #fff;
+}
+.card__item {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.card__time {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  padding-left: 30px;
+  width: 35%;
+}
+.card__content {
+  padding-right: 30px;
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+}
+.card__descr {
+  width: 70%;
+  border-bottom: 1px solid $yellow;
+  padding-bottom: 16px;
+}
+.card__descr-text {
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+}
+.card__descr-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__descr-link {
+  display: block;
+  text-decoration: none;
+  color: #000222;
+  background-color: #eee;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 5px 10px;
+}
+.card__descr__companies {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.card__descr__companies-item {
+  margin: 0 20px;
+}
+.card__button-inner {
+  width: 30%;
+  text-align: center;
+}
+.card__button {
+  width: 185px;
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  border: none;
+  background-color: $yellow;
+  position: relative;
+  border-radius: 5px 0 0 5px;
+  border-right: 1px solid #fff;
+  &:focus {
+    outline: none;
+  }
+  &:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -41px;
+    top: 0;
+    background-color: $yellow;
+    border-radius: 0 5px 5px 0;
+  }
+}
+.card__button-count {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 700;
+  span {
+    font-weight: 300;
+  }
+}
+.card__footer-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.card__speakers {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.card__speakers-item {
+  padding-left: 58px;
+  position: relative;
+  line-height: 17px;
+  margin-right: 30px;
+  width: 29%;
+}
+.card__speakers-photo {
+  position: absolute;
+  left: 0;
+  img {
+    border-radius: 50%;
+  }
+}
+.card__speakers-name {
+  font-size: 14px;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+.card__speakers-bio {
+  font-size: 11px;
+  margin-left: 5px;
+}
+.card__speakers-next {
+  font-size: 0;
+  right: 0;
+  position: absolute;
+  &:after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-bottom: 2px solid #000222;
+    border-right: 2px solid #000222;
+    transform: rotate(-45deg);
+  }
+}
