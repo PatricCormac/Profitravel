@@ -54,8 +54,7 @@
   margin: 0 20px;
 }
 .card__button-inner {
-  width: 30%;
-  text-align: center;
+  width: 225px;
 }
 .card__button {
   width: 185px;
@@ -63,11 +62,23 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
-  border: none;
   background-color: $yellow;
   position: relative;
   border-radius: 5px 0 0 5px;
   border-right: 1px solid #fff;
+  text-align: center;
+  cursor: pointer;
+  .card__button-text {
+    margin: 0;
+  }
+  .preloader-inner {
+    display: none;
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
   &:focus {
     outline: none;
   }
@@ -81,11 +92,57 @@
     background-color: $yellow;
     border-radius: 0 5px 5px 0;
   }
+  .circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    right: -29px;
+    border-radius: 50%;
+    border: 2px solid #000222;
+    z-index: 1;
+    transform: translateY(-50%);
+    &--registr {
+      border-left: none;
+      border-top: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 0;
+      border-bottom: 2px solid #000222;
+      border-right: 2px solid #000222;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+  &--view {
+    background-color: #27b1be;
+    color: #fff;
+    &:after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: -41px;
+      top: 0;
+      background-color: #27b1be;
+      border-radius: 0 5px 5px 0;
+    }
+    .circle {
+      border-right: none;
+      width: 0;
+      height: 0;
+      border-radius: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 16px solid #fff;
+      transform: translateY(-50%);
+    }
+  }
 }
 .card__button-count {
   font-size: 11px;
   line-height: 14px;
   font-weight: 700;
+  text-align: center;
   span {
     font-weight: 300;
   }

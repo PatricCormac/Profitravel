@@ -55,7 +55,22 @@
                     </div>
                   </div>
                   <div class="card__button-inner">
-                    <button class="card__button">Записаться</button>
+                    <div class="card__button js-reg-button">
+                      <p class="card__button-text">Записаться</p>
+                      <div class="circle js-circle"></div>
+                      <div class="preloader-inner js-preloader">
+                        <div class="lds-spinner">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
                     <p class="card__button-count">
                       615 участников <span>уже записались</span>
                     </p>
@@ -119,7 +134,7 @@
                     <div class="card__descr-more">
                       <a class="card__descr-link" href="#">Подробнее</a>
                       <div class="card__descr__companies">
-                        <div class="card__descr__companies-item">
+                        <!--<div class="card__descr__companies-item">
                           <img src="./img/companies-1.png" />
                         </div>
                         <div class="card__descr__companies-item">
@@ -127,12 +142,27 @@
                         </div>
                         <div class="card__descr__companies-item">
                           <img src="./img/companies-3.png" />
-                        </div>
+                        </div>-->
                       </div>
                     </div>
                   </div>
                   <div class="card__button-inner">
-                    <button class="card__button">Записаться</button>
+                    <div class="card__button card__button--view">
+                      <p class="card__button-text">Смотреть</p>
+                      <div class="circle js-circle"></div>
+                      <div class="preloader-inner js-preloader">
+                        <div class="lds-spinner">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
                     <p class="card__button-count">
                       615 участников <span>уже записались</span>
                     </p>
@@ -186,5 +216,23 @@
         </div>
       </div>
     </section>
+    <script>
+      const regButton = document.getElementsByClassName("js-reg-button");
+      const preloader = document.getElementsByClassName("js-preloader");
+      const circle = document.getElementsByClassName("js-circle");
+      const buttonText = document.getElementsByClassName("card__button-text");
+      for (let i = 0; i < regButton.length; i++) {
+        regButton[i].addEventListener("click", () => {
+          preloader[i].style.display = "block";
+          circle[i].style.display = "none";
+          setTimeout(() => {
+            buttonText[i].textContent = "Вы записаны";
+            preloader[i].style.display = "none";
+            circle[i].style.display = "block";
+            circle[i].classList.add("circle--registr");
+          }, 2000);
+        });
+      }
+    </script>
   </body>
 </html>
