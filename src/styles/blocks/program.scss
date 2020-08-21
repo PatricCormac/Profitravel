@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 30px;
+  position: relative;
 }
 
 .program__date {
@@ -62,5 +63,8 @@
     .logo-mobile {
       display: block;
     }
+  }
+  @media (max-width: 450px) {
+    margin-right: 10px;
   }
 }
