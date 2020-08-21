@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,10 +24,15 @@
               19 мая, вторник
             </div>
             <div class="program__logo">
-              <img src="./img/logo.png" alt="Логотип" />
+              <img class="logo-desktop" src="./img/logo.png" alt="Логотип" />
+              <img
+                class="logo-mobile"
+                src="./img/logo-mobile.png"
+                alt="Логотип"
+              />
             </div>
           </div>
-          <div class="card">
+          <div class="card hidden">
             <div class="card__item">
               <div class="card__time">11:00 <sup>мск</sup></div>
               <div class="card__content">
@@ -38,20 +43,6 @@
                       Открытие de luxe-отеля The Nautilus Maldives и особенности
                       lifestyle-отеля Kandima Maldives. Розыгрыш призов от
                       курортов
-                    </div>
-                    <div class="card__descr-more">
-                      <a class="card__descr-link" href="#">Подробнее</a>
-                      <div class="card__descr__companies">
-                        <div class="card__descr__companies-item">
-                          <img src="./img/companies-1.png" />
-                        </div>
-                        <div class="card__descr__companies-item">
-                          <img src="./img/companies-2.png" />
-                        </div>
-                        <div class="card__descr__companies-item">
-                          <img src="./img/companies-3.png" />
-                        </div>
-                      </div>
                     </div>
                   </div>
                   <div class="card__button-inner">
@@ -76,6 +67,20 @@
                     </p>
                   </div>
                 </div>
+                <div class="card__descr-more">
+                  <a class="card__descr-link" href="#">Подробнее</a>
+                  <div class="card__descr__companies">
+                    <div class="card__descr__companies-item">
+                      <img src="./img/companies-1.png" />
+                    </div>
+                    <div class="card__descr__companies-item">
+                      <img src="./img/companies-2.png" />
+                    </div>
+                    <div class="card__descr__companies-item">
+                      <img src="./img/companies-3.png" />
+                    </div>
+                  </div>
+                </div>
                 <div class="card__footer">
                   <p class="card__footer-title">Эксперты:</p>
                   <div class="card__speakers">
@@ -117,6 +122,27 @@
                       </div>
                     </div>
                   </div>
+                  <div class="card__button-inner card__button-inner-mobile">
+                    <div class="card__button js-reg-button">
+                      <p class="card__button-text">Записаться</p>
+                      <div class="circle js-circle"></div>
+                      <div class="preloader-inner js-preloader">
+                        <div class="lds-spinner">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card__button-count">
+                      615 участников <span>уже записались</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,20 +156,6 @@
                       Открытие de luxe-отеля The Nautilus Maldives и особенности
                       lifestyle-отеля Kandima Maldives. Розыгрыш призов от
                       курортов
-                    </div>
-                    <div class="card__descr-more">
-                      <a class="card__descr-link" href="#">Подробнее</a>
-                      <div class="card__descr__companies">
-                        <!--<div class="card__descr__companies-item">
-                          <img src="./img/companies-1.png" />
-                        </div>
-                        <div class="card__descr__companies-item">
-                          <img src="./img/companies-2.png" />
-                        </div>
-                        <div class="card__descr__companies-item">
-                          <img src="./img/companies-3.png" />
-                        </div>-->
-                      </div>
                     </div>
                   </div>
                   <div class="card__button-inner">
@@ -168,6 +180,20 @@
                     </p>
                   </div>
                 </div>
+                <div class="card__descr-more">
+                  <a class="card__descr-link" href="#">Подробнее</a>
+                  <div class="card__descr__companies">
+                    <!--<div class="card__descr__companies-item">
+                      <img src="./img/companies-1.png" />
+                    </div>
+                    <div class="card__descr__companies-item">
+                      <img src="./img/companies-2.png" />
+                    </div>
+                    <div class="card__descr__companies-item">
+                      <img src="./img/companies-3.png" />
+                    </div>-->
+                  </div>
+                </div>
                 <div class="card__footer">
                   <p class="card__footer-title">Эксперты:</p>
                   <div class="card__speakers">
@@ -209,6 +235,27 @@
                       </div>
                     </div>
                   </div>
+                  <div class="card__button-inner card__button-inner-mobile">
+                    <div class="card__button card__button--view">
+                      <p class="card__button-text">Смотреть</p>
+                      <div class="circle js-circle"></div>
+                      <div class="preloader-inner js-preloader">
+                        <div class="lds-spinner">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card__button-count">
+                      615 участников <span>уже записались</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -221,6 +268,8 @@
       const preloader = document.getElementsByClassName("js-preloader");
       const circle = document.getElementsByClassName("js-circle");
       const buttonText = document.getElementsByClassName("card__button-text");
+      const cardButton = document.querySelector(".program__top");
+      const cardContent = document.querySelector(".card");
       for (let i = 0; i < regButton.length; i++) {
         regButton[i].addEventListener("click", () => {
           preloader[i].style.display = "block";
@@ -233,6 +282,9 @@
           }, 2000);
         });
       }
+      cardButton.addEventListener("click", () => {
+        cardContent.classList.toggle("hidden");
+      });
     </script>
   </body>
 </html>
